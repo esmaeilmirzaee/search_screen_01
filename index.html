@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <title>Start typing...</title>
+  </head>
+  <body>
+    <i class="search-icon fas fa-search"></i>
+    <div class="search-screen">
+      <i class="close-icon fas fa-times"></i>
+      <input type="text" class="search-box" placeholder="Search" />
+    </div>
+    <script>
+      const searchIcon = document.querySelector('.search-icon');
+      const closeIcon = document.querySelector('.close-icon');
+      const searchScreen = document.querySelector('.search-screen');
+      searchIcon.addEventListener('click', () => {
+        searchScreen.classList.add('active');
+      });
+      closeIcon.addEventListener('click', () => {
+        document.querySelector('.search-screen').classList.remove('active');
+      });
+    </script>
+  </body>
+</html>
